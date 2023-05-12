@@ -1,0 +1,177 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri May 12 09:32:58 2023
+| Host         : TuringMachine running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file XADCdemo_control_sets_placed.rpt
+| Design       : XADCdemo
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    99 |
+|    Minimum number of control sets                        |    99 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   510 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    99 |
+| >= 0 to < 4        |     6 |
+| >= 4 to < 6        |    11 |
+| >= 6 to < 8        |     6 |
+| >= 8 to < 10       |    47 |
+| >= 10 to < 12      |    14 |
+| >= 12 to < 14      |     5 |
+| >= 14 to < 16      |     3 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             218 |           99 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              48 |           16 |
+| Yes          | No                    | No                     |             140 |           73 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             716 |          224 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+--------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+|      Clock Signal     |                   Enable Signal                  |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+--------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+|  CLK100MHZ_IBUF_BUFG  | XLXI_7/drdy_out                                  |                                                  |                1 |              1 |         1.00 |
+|  PixCLK               | nolabel_line225/display/delaliens1               | nolabel_line225/display/delaliens3               |                1 |              1 |         1.00 |
+|  PixCLK               | nolabel_line225/display/delaliens1               | nolabel_line225/display/delaliens4               |                1 |              1 |         1.00 |
+|  PixCLK               | nolabel_line225/display/delaliens1               | nolabel_line225/display/delaliens2               |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG  | nolabel_line225/display/V_SCAN[6]_i_2_n_0        | nolabel_line225/display/V_SCAN[6]_i_1_n_0        |                2 |              2 |         1.00 |
+|  segment1/XLXI_47/CLK |                                                  |                                                  |                1 |              3 |         3.00 |
+|  PixCLK               | nolabel_line225/Bullet/constX[8]_i_1_n_0         | nolabel_line225/display/RESET                    |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG  |                                                  | sw_reg_n_0                                       |                2 |              4 |         2.00 |
+|  PixCLK               | nolabel_line225/ADisplay/A4X[9]_i_2_n_0          | nolabel_line225/ADisplay/A4X[8]_i_1_n_0          |                1 |              4 |         4.00 |
+|  PixCLK               | nolabel_line225/ADisplay/A4X[9]_i_2_n_0          | nolabel_line225/ADisplay/A4X[9]_i_1_n_0          |                3 |              4 |         1.33 |
+|  PixCLK               | nolabel_line225/ADisplay/A1X[9]_i_1_n_0          | nolabel_line225/ADisplay/A1X[8]_i_1_n_0          |                4 |              4 |         1.00 |
+|  PixCLK               | nolabel_line225/ADisplay/A2X[9]_i_1_n_0          | nolabel_line225/ADisplay/A2X[7]_i_1_n_0          |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG  | nolabel_line225/display/V_SCAN[6]_i_2_n_0        |                                                  |                2 |              5 |         2.50 |
+|  PixCLK               | nolabel_line225/display/delaliens1               | nolabel_line225/ADisplay/delaliens1[9]_i_1_n_0   |                2 |              5 |         2.50 |
+|  PixCLK               | nolabel_line225/RocketDisplay/RocketX[8]_i_1_n_0 |                                                  |                2 |              5 |         2.50 |
+|  PixCLK               | nolabel_line225/ADisplay/A1X[9]_i_1_n_0          |                                                  |                4 |              5 |         1.25 |
+|  PixCLK               | nolabel_line225/RocketDisplay/RocketX[8]_i_1_n_0 | nolabel_line225/RocketDisplay/RocketX[9]_i_1_n_0 |                5 |              5 |         1.00 |
+|  PixCLK               | nolabel_line225/Bullet/BulletY                   | nolabel_line225/display/BulletY_reg_2_sn_1       |                2 |              6 |         3.00 |
+|  PixCLK               | nolabel_line225/ADisplay/A2X[9]_i_1_n_0          |                                                  |                5 |              6 |         1.20 |
+|  PixCLK               | nolabel_line225/Bullet/constX[8]_i_1_n_0         |                                                  |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG  | XLXI_7/drdy_out                                  | LED[15]_i_1_n_0                                  |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG  | XLXI_7/drdy_out                                  | LED[7]_i_1_n_0                                   |                2 |              7 |         3.50 |
+|  PixCLK               | nolabel_line225/Bullet/Bullet2Y                  | nolabel_line225/Bullet/Bullet2Y[8]_i_1_n_0       |                3 |              7 |         2.33 |
+|  PixCLK               | nolabel_line225/display/A1SpriteOn_reg           | nolabel_line225/display/A1SpriteOn_reg_0         |                2 |              8 |         4.00 |
+|  PixCLK               | nolabel_line225/display/address2_reg[7]_i_10[0]  | nolabel_line225/display/address2[7]_i_6[0]       |                2 |              8 |         4.00 |
+|  PixCLK               | nolabel_line225/ADisplay/highscore0              |                                                  |                2 |              8 |         4.00 |
+|  PixCLK               | nolabel_line225/ADisplay/A3X[8]_i_2_n_0          | nolabel_line225/ADisplay/A3X[8]_i_1_n_0          |                5 |              8 |         1.60 |
+|  PixCLK               | nolabel_line225/display/address_reg[7]_i_10[0]   | nolabel_line225/display/address[7]_i_6_0[0]      |                3 |              8 |         2.67 |
+|  PixCLK               | nolabel_line225/display/highscore_reg[1]_0[0]    | nolabel_line225/ADisplay/hs10address[8]_i_1_n_0  |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/highscore_reg[2][0]      | nolabel_line225/ADisplay/hs13address[8]_i_1_n_0  |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/display/highscore_reg[1][0]      | nolabel_line225/ADisplay/hs15address[8]_i_1_n_0  |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/display/highscore_reg[4][0]      | nolabel_line225/ADisplay/hs16address[8]_i_1_n_0  |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/highscore_reg[7][0]      | nolabel_line225/ADisplay/hs19address[8]_i_1_n_0  |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/score_reg[7]_0[0]        | nolabel_line225/ADisplay/s19address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/highscore_reg[5][0]      | nolabel_line225/ADisplay/hs18address[8]_i_1_n_0  |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/score_reg[7][0]          | nolabel_line225/ADisplay/s17address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/score_reg[4]_0[0]        | nolabel_line225/ADisplay/s12address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/score_reg[3]_1[0]        | nolabel_line225/ADisplay/s10address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/lives_reg[2][0]          | nolabel_line225/display/lives_reg[2]_0[0]        |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/score_reg[3]_2[0]        | nolabel_line225/ADisplay/s16address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/score_reg[1][0]          | nolabel_line225/ADisplay/s11address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/score_reg[3]_0[0]        | nolabel_line225/ADisplay/s14address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/score_reg[3][0]          | nolabel_line225/ADisplay/s18address[8]_i_1_n_0   |                4 |              9 |         2.25 |
+|  PixCLK               | nolabel_line225/display/score_reg[2][0]          | nolabel_line225/ADisplay/s13address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/score_reg[4][0]          | nolabel_line225/ADisplay/s15address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/hs12address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs12address[8]_i_1_n_0  |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/ADisplay/hs11address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs11address[8]_i_1_n_0  |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/ADisplay/hs14address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs14address[8]_i_1_n_0  |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/ADisplay/hs17address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs17address[8]_i_1_n_0  |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/hs21address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs21address[8]_i_1_n_0  |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/ADisplay/hs24address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs24address[8]_i_1_n_0  |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/hs22address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs22address[8]_i_1_n_0  |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/hs26address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs26address[8]_i_1_n_0  |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/hs27address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs27address[8]_i_1_n_0  |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/ADisplay/hs25address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs25address[8]_i_1_n_0  |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/hs23address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs23address[8]_i_1_n_0  |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/ADisplay/hs20address[8]_i_2_n_0  | nolabel_line225/ADisplay/hs20address[8]_i_1_n_0  |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/s20address[8]_i_2_n_0   | nolabel_line225/ADisplay/s20address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/s24address[8]_i_2_n_0   | nolabel_line225/ADisplay/s24address[8]_i_1_n_0   |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/ADisplay/s22address[8]_i_2_n_0   | nolabel_line225/ADisplay/s22address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/s25address[8]_i_2_n_0   | nolabel_line225/ADisplay/s25address[8]_i_1_n_0   |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/ADisplay/s23address[8]_i_2_n_0   | nolabel_line225/ADisplay/s23address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/s27address[8]_i_2_n_0   | nolabel_line225/ADisplay/s27address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/s26address[8]_i_2_n_0   | nolabel_line225/ADisplay/s26address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/s21address[8]_i_2_n_0   | nolabel_line225/ADisplay/s21address[8]_i_1_n_0   |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/ADisplay/s28address[8]_i_2_n_0   | nolabel_line225/ADisplay/s28address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/ADisplay/s29address[8]_i_2_n_0   | nolabel_line225/ADisplay/s29address[8]_i_1_n_0   |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/RSpriteOn_i_1_2[0]       | nolabel_line225/display/lives_reg[2]_1[0]        |                3 |              9 |         3.00 |
+|  PixCLK               | nolabel_line225/display/H_SCAN_reg[8]_2[0]       | nolabel_line225/display/lives_reg[1][0]          |                2 |              9 |         4.50 |
+|  PixCLK               | nolabel_line225/display/highscore_reg[0][0]      | nolabel_line225/ADisplay/hs28address[8]_i_1_n_0  |                3 |              9 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG  | PixCLK                                           | nolabel_line225/display/H_SCAN                   |                4 |             10 |         2.50 |
+|  PixCLK               | nolabel_line225/ADisplay/A1Y[9]_i_2_n_0          | nolabel_line225/Bullet/SS[0]                     |                5 |             10 |         2.00 |
+|  PixCLK               | nolabel_line225/ADisplay/A2Y[9]_i_2_n_0          | nolabel_line225/Bullet/SR[0]                     |                5 |             10 |         2.00 |
+|  PixCLK               | nolabel_line225/ADisplay/A2address[9]_i_2_n_0    | nolabel_line225/ADisplay/A2address[9]_i_1_n_0    |                2 |             10 |         5.00 |
+|  PixCLK               | nolabel_line225/ADisplay/A3address[9]_i_2_n_0    | nolabel_line225/ADisplay/A3address[9]_i_1_n_0    |                3 |             10 |         3.33 |
+|  PixCLK               | nolabel_line225/ADisplay/A3Y[9]_i_2_n_0          | nolabel_line225/Bullet/BSpriteOn2_reg_1[0]       |                3 |             10 |         3.33 |
+|  PixCLK               | nolabel_line225/display/RSpriteOn_i_1_3[0]       | nolabel_line225/display/SR[0]                    |                2 |             10 |         5.00 |
+|  PixCLK               | nolabel_line225/display/Bullet2Y_reg[2][0]       |                                                  |                3 |             10 |         3.33 |
+|  PixCLK               | nolabel_line225/ADisplay/A4address[9]_i_2_n_0    | nolabel_line225/ADisplay/A4address[9]_i_1_n_0    |                2 |             10 |         5.00 |
+|  PixCLK               | nolabel_line225/display/Bullet2Y_reg[2]_0[0]     | nolabel_line225/Bullet/delaliens2[9]_i_1_n_0     |                3 |             10 |         3.33 |
+|  PixCLK               | nolabel_line225/display/E[0]                     | nolabel_line225/ADisplay/A1address[9]_i_1_n_0    |                2 |             10 |         5.00 |
+|  PixCLK               | nolabel_line225/ADisplay/A4Y[9]_i_2_n_0          | nolabel_line225/Bullet/BSpriteOn2_reg_0[0]       |                4 |             10 |         2.50 |
+|  PixCLK               | nolabel_line225/display/BulletY_reg[2]_0[0]      |                                                  |                3 |             10 |         3.33 |
+|  PixCLK               | nolabel_line225/display/BulletY_reg[2]_1[0]      | nolabel_line225/Bullet/delaliens[9]_i_1_n_0      |                3 |             10 |         3.33 |
+|  PixCLK               |                                                  | nolabel_line225/display/H_SCAN_reg[5]_10[0]      |                6 |             12 |         2.00 |
+|  PixCLK               | nolabel_line225/display/RSpriteOn_i_1_0          | nolabel_line225/display/H_SCAN_reg[8]_3          |                3 |             12 |         4.00 |
+|  PixCLK               | nolabel_line225/display/s4address                | nolabel_line225/display/H_SCAN_reg[8]_4          |                3 |             12 |         4.00 |
+|  PixCLK               | nolabel_line225/display/s2address                | nolabel_line225/display/H_SCAN_reg[3]_0          |                3 |             12 |         4.00 |
+|  PixCLK               | nolabel_line225/display/s3address                | nolabel_line225/display/V_SCAN_reg[0]_0          |                3 |             12 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG  | dig3[3]_i_2_n_0                                  | dig3                                             |               10 |             14 |         1.40 |
+|  PixCLK               | nolabel_line225/display/p1address                | nolabel_line225/display/p1address[0]_i_8_0       |                4 |             14 |         3.50 |
+|  PixCLK               | nolabel_line225/display/RSpriteOn_i_1_1          | nolabel_line225/display/V_SCAN_reg[9]_0          |                4 |             15 |         3.75 |
+|  PixCLK               | nolabel_line225/display/realstartaddress         | nolabel_line225/display/H_SCAN_reg[9]_0          |                4 |             16 |         4.00 |
+|  PixCLK               | nolabel_line225/display/realendaddress           | nolabel_line225/display/V_SCAN_reg[0]_1          |                5 |             17 |         3.40 |
+|  PixCLK               | nolabel_line225/display/delaliens1               |                                                  |                7 |             31 |         4.43 |
+|  CLK100MHZ_IBUF_BUFG  |                                                  | sw                                               |                8 |             32 |         4.00 |
+|  PixCLK               | nolabel_line225/display/H_SCAN_reg[8]_0          |                                                  |               41 |             53 |         1.29 |
+|  CLK100MHZ_IBUF_BUFG  |                                                  |                                                  |               30 |             78 |         2.60 |
+|  PixCLK               |                                                  |                                                  |               68 |            137 |         2.01 |
++-----------------------+--------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+
+
