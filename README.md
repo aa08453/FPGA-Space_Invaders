@@ -4,3 +4,6 @@ Our project is a single-player shooting game where the player uses the joystick 
 
 
 Brought to you by team "استاد پلگ شاٹ ہے"
+
+https://youtu.be/2K7r7UfxI6Q
+
