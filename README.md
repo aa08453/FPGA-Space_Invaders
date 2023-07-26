@@ -4,4 +4,4 @@ Our project is a single-player shooting game where the player uses the joystick 
 
 Brought to you by team "استاد پلگ شاٹ ہے"
 
-[![DLD Final Project: Space Invaders Game](https://i.ytimg.com/an_webp/2K7r7UfxI6Q/mqdefault_6s.webp?du=3000&sqp=CMDphKYG&rs=AOn4CLDuBYWLaSghDoCxB-4Kngn6CCcd3wjpg)](https://www.youtube.com/watch?v=2K7r7UfxI6Q&t=132s&ab_channel=AbdullahAmir)
+[![DLD Final Project: Space Invaders Game](https://i.ytimg.com/an_webp/2K7r7UfxI6Q/mqdefault_6s.webp?du=3000&sqp=CMDphKYG&rs=AOn4CLDuBYWLaSghDoCxB-4Kngn6CCcd3wjpg)](https://www.youtube.com/watch?v=2K7r7UfxI6Q&t=132s&ab_channel=AbdullahAmir "DLD Final Project: Space Invaders Game")
